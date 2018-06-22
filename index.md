@@ -1,6 +1,6 @@
 ---
 layout: default
-<link rel="shortcut icon" type="image/x-icon" href="icons/icons8-mind-map-100.png">
+<link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
 ---
 
 # RTM PROJECT
