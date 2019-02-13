@@ -1,8 +1,35 @@
 - company: CreativeDrive
   link: https://cora.creativedrive.com/
   job_title: DevOps Engineer
-  dates: March 2017 - Present
+  dates: March 2018 - Present
   quote: >
    Veni, vidi, vici
   description: | # this will include new lines to allow paragraphs
     Innovation and transformation, monolithic to microservices
+
+- company: Cresol Confederação
+  link: http://cresolconfederacao.com.br/
+  job_title: IT System Administrator
+  dates: February 2015 - February 2018
+  quote: >
+   Together We're Strong
+  description: | # this will include new lines to allow paragraphs
+    IT branch of Cresol Bank Institution
+
+- company: Baia Sul Hospital
+  link: http://www.hospitalbaiasul.com.br/
+  job_title: IT System Analyst
+  dates: November 2014 - February 2015
+  quote: >
+   Our biggest concern is life
+  description: | # this will include new lines to allow paragraphs
+    Infrastructure manager
+
+- company: Baia Sul Hospital
+  link: http://www.hospitalbaiasul.com.br/
+  job_title: Intern
+  dates: April 2014 - November 2014
+  quote: >
+   Our biggest concern is life
+  description: | # this will include new lines to allow paragraphs
+    Infrastructure intern
