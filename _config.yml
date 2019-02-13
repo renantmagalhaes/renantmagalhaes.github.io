@@ -41,10 +41,10 @@ about_content: | # this will include new lines to allow paragraphs
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
   Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-   - Rock climbing
+   - Biking
    - Gaming
-   - Knitting
-   - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+   - Manga reading
+   - [Becoming Master of Martial Arts](https://68.media.tumblr.com/36ce2037081ed8356d1258f627d515e8/tumblr_o7wk33S5bZ1tqh2yyo1_500.gif)
 
 # Footer
 footer_show_references: true
