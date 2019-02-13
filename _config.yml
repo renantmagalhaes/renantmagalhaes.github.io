@@ -1,5 +1,2 @@
-#theme: jekyll-theme-cayman
-title: [RENAN TOESQUI MAGALHÃES]
-description: [Knowledge database for everyone!]
-
-theme: jekyll-theme-minimal
+markdown:   kramdown
+style:  kjhealy
