@@ -1,7 +1,7 @@
 - name: RTM PROJECT
-  link: github.com/sproogen
-  github: sproogen/resume-theme
+  link: github.com/renantmagalhaes
+  github: https://github.com/renantmagalhaes/knowledge-database
   quote: >
     A knowledge database for everyone
   description: | # this will include new lines to allow paragraphs
-        <mark>RTM project<mark> is a personal desire that i have for some time now, it will shows all the knowledge that i acquire in my life as sysadmin, and also functions as a open database of information for me, or anyone that it can help.
+        <mark>RTM project</mark> is a personal desire that i have for some time now, it will shows all the knowledge that i acquire in my life as sysadmin, and also functions as a open database of information for me, or anyone that it can help.
