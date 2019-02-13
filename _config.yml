@@ -1,10 +1,10 @@
 # Site
 repository: sproogen/resume-theme
-# favicon: images/favicon.ico
+favicon: images/favicon.ico
 
 # Personal info
 name: Renan Toesqui Magalhães
-title: Sysadmin / DevOps Engineer
+title: SysAdmin / DevOps Engineer
 email: renantmagalhaes@gmail.com
 website: https://renantmagalhaes.net
 
