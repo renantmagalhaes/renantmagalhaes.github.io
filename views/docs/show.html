@@ -1,0 +1,7 @@
+{{#each doc.sections}}
+  {{> doc
+    doc=this
+    docEn=(lookup ../docEn.sections @index)
+    currentLocale=../currentLocale
+  }}
+{{/each}}

@@ -1,0 +1,12 @@
+<section class='page-section error-page'>
+  <div class='container-narrow text-center py-md-8'>
+    <h1>404</h1>
+    <p class="lead">
+      {{#if message}}
+        {{message}}
+      {{else}}
+        {{localized._404.page_not_found}}
+      {{/if}}
+    </p>
+  </div>
+</section>
