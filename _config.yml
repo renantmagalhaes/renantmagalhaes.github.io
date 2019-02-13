@@ -26,7 +26,9 @@ about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name's Renan ....  I'm a former sysadmin working in a Banking environment with BACEN (Central Bank of Brazil) and SPB (Brazilian payment system), with an active participation in Linux and Windows systems administration and responsible for project management in this area. Now working as DevOps engineer looking towards a future where automation and a high availability are core pieces of every system 
 
-I am most skilled in: <mark>Linux Administration</mark>, <mark>Kubernetes</mark> and <mark>AWS</mark>
+  I am most skilled in: <mark>Linux Administration</mark>, <mark>Kubernetes</mark> and <mark>AWS</mark>
+
+  You can check my full skills list in my ```Linkedin``` profile, just click in <mark>IN</mark> the header icon 
 
 # Projects Section
 # projects_title: Projects
