@@ -1,6 +1,6 @@
 - name: RTM PROJECT
   link: github.com/renantmagalhaes
-  github: https://github.com/renantmagalhaes/knowledge-database
+  github: renantmagalhaes/knowledge-database
   quote: >
     A knowledge database for everyone
   description: | # this will include new lines to allow paragraphs
