@@ -23,10 +23,4 @@
   quote: >
    Our biggest concern is life
   description: | # this will include new lines to allow paragraphs
-    ● Infrastructure manager
-      Windows Network Administration (Active Directory) \ Linux (Apache, OCS)
-      Group Policy management
-      Backup routines (Veeam \ Cobian)
-      Fortinet firewall system
-      Telephone Exchange
-      Structured Cabling
+    I was responsible for manage the whole the hospital infrastructure, and for leading a team of 3 peoples. The hospital system was using almost only Windows environment server, i brought some opensource tools and implement several linux services for monitoring and managing the tech park.
