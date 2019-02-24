@@ -7,15 +7,16 @@
   description: | # this will include new lines to allow paragraphs
     In charge of bringing innovation and new technologies
     Responsible for managing hundreds of servers in both public and private Data centers around the world.
+    
     Updated with the latest technology regarding:
-
+    
     * Distributed systems using Kubernetes orchestration and microservices 
     * Continuous integration and delivery using cutting edge tools such Jenkins and CicleCI
     * Cyber Security
-    ** Security implementation and best practices in infrastructure.
+      ** Security implementation and best practices in infrastructure.
     * Build and Deploy services using various Cloud Services such as:
-    ** Amazon Web Services (AWS)
-    ** Google Cloud Platform
+      * Amazon Web Services (AWS)
+      * Google Cloud Platform
     
     Design solutions for disaster recovery management:
     
