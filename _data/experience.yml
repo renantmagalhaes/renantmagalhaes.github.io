@@ -1,12 +1,31 @@
+- company: X-SENSORS GmbH
+  link: https://www.x-sensors.de/de
+  job_title: DevOps Engineer
+  dates: February 2019 - Present
+  quote: >
+   Industry 4.0
+  description: | # this will include new lines to allow paragraphs
+    In charge of bringing innovation and new technologies.
+    
+    Updated with the latest technology regarding:
+    
+    * Distributed systems using Kubernetes orchestration and microservices 
+    * Cyber Security : Security implementation and best practices in infrastructure.
+    * Build and Deploy services using various Cloud Services such as: Amazon Web Services(AWS) and Google Cloud Platform
+    
+    Design solutions for disaster recovery management:
+    
+    * Test Planning and Execution
+    * Post-Test Analysis
+    * Recovery Lifecycle Management
+
 - company: CreativeDrive
   link: https://cora.creativedrive.com/
   job_title: DevOps Engineer
   dates: March 2018 - Present
   quote: >
    Veni, vidi, vici
-  description: | # this will include new lines to allow paragraphs
-    In charge of bringing innovation and new technologies.
-    
+  description: | # this will include new lines to allow paragraphs    
     Responsible for managing hundreds of servers in both public and private Data centers around the world.
     
     Updated with the latest technology regarding:
