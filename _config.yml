@@ -25,9 +25,9 @@ linkedin_username: renantmagalhaes
 #about_profile_image: images/profile.jpg
 about_profile_image: images/profile2.png
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Renan ....  I'm a former sysadmin working in a Banking environment with BACEN (Central Bank of Brazil) and SPB (Brazilian payment system), with an active participation in Linux and Windows systems administration and responsible for project management in this area. Now working as DevOps engineer focused in build secure and high distributed systems in cloud.
+  Hi, my name's Renan ....  I'm a former sysadmin working in a Banking environment with BACEN (Central Bank of Brazil) and SPB (Brazilian payment system), with an active participation in Linux and Windows systems administration, I`m was also responsible for project management in this area. Now working as DevOps engineer focused in build secure and high distributed systems inside Cloud environments.
 
-  I am most skilled in: <mark>Linux Administration</mark>, <mark>Kubernetes</mark> and <mark>AWS</mark>
+  I am most skilled in: <mark>Linux</mark>, <mark>Kubernetes</mark> and <mark>AWS</mark>
 
   You can check my full skills list in my [Linkedin](https://linkedin.com/in/renantmagalhaes/) profile. 
 
@@ -43,7 +43,7 @@ experience_title: Latest Experiences
 # More Section
 # more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
-  Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+  Alongside my interest in software engineering some of my other hobbies are:
    - Biking
    - Gaming
    - Manga reading

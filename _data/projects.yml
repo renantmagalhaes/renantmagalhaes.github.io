@@ -4,7 +4,7 @@
   quote: >
    A knowledge database for everyone
   description: | # this will include new lines to allow paragraphs
-        <mark>RTM project</mark> is a personal desire that i have for some time now, it will show all the knowledge that i acquire in my life as sysadmin, and also functions as a open database of information for me, or anyone that can make use of that.
+        <mark>RTM project</mark> is a personal desire that I had for some time now, it will show all the knowledge that I have acquired in my life as sysadmin, and also functions as an open database of information for me, or anyone that can make use of that.
 
 - name: WORKSTATION 
   link: github.com/renantmagalhaes
@@ -12,4 +12,4 @@
   quote: >
    My full enviroment
   description: | # this will include new lines to allow paragraphs
-    This is a project for building and configure my *full* working environment ... This is still a WIP, but there's some insteresting stuf here.
+    This is a project for build and configure my *full* working environment ... This is still a WIP, but there's some interesting stuff in here.
