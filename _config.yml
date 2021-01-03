@@ -38,10 +38,10 @@ linkedin_username: renantmagalhaes
 #orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
-additional_links:
-- title: Link name
-  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-  url: Link url (eg. https://google.com)
+#additional_links:
+#- title: Link name
+#  icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+#  url: Link url (eg. https://google.com)
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -54,47 +54,68 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: Directory of profile image (eg. images/profile.jpg)
+about_profile_image: images/profile2.png
 about_content: | # this will include new lines to allow paragraphs
-  Write an awesome description about yourself here, this supports markdown, so you can add [links](http://foobar.com) and highlight things <mark>like this</mark>.
+  Hi, my name's Renan ....  I'm a former sysadmin working in a Banking environment with BACEN (Central Bank of Brazil) and SPB (Brazilian payment system), with an active participation in Linux and Windows systems administration, I`m was also responsible for project management in this area. Now working as DevOps engineer focused in build secure and high distributed systems inside Cloud environments.
 
-  You can even add paragraphs by using empty lines like this and add anything else [markdown](https://www.markdownguide.org/getting-started#what-is-markdown) supports such as
-    - Lists
-    - Tables
-    - <a href="google.com">Links</a>
-    - Images ![alt text](/images/landscape-trees.jpg "Trees")
+  I am most skilled in: <mark>Linux</mark>, <mark>Kubernetes</mark> and <mark>AWS</mark>
+
+  You can check my full skills list in my [Linkedin](https://linkedin.com/in/renantmagalhaes/) profile.
 
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
+        title: RTM PROJECT
+        #link: https://github.com/renantmagalhaes/knowledge-database
+        link_text: Knowledge Database
         additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          - title:  RTM PROJECT
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: https://github.com/renantmagalhaes/knowledge-database
+          - title:  RTM PROJECT
         quote: >
-          Short overview of the project (optional)
+           A knowledge database for everyone
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          <mark>RTM project</mark> is a personal desire that I had for some time now, it will show all the knowledge that I have acquired in my life as sysadmin, and also functions as an open database of information for me, or anyone that can make use of that.
+      - layout: left
+        title: WORKSTATION
+        #link: https://github.com/renantmagalhaes/knowledge-database
+        link_text: Knowledge Database
+        additional_links:
+          - title:  WORKSTATION
+            icon: fab fa-github
+            url: https://github.com/renantmagalhaes/workstation
+          - title:  WORKSTATION
+        quote: >
+           My full environment
+        description: | # this will include new lines to allow paragraphs
+          This is a project for build and configure my *full* working environment ... This is still a WIP, but there's some interesting stuff in here.
   - title: Experience
     layout: list
     content:
-      - layout: right
-        title: Company name
-        sub_title: Job title
-        caption: Date Range (eg. November 2016 - present)
-        link: Link to company (optional)
+      - layout: left
+        title:  X-SENSORS GmbH
+        sub_title: DevSecOps Engineer
+        caption: February 2019 - Present
+        link: https://xsensors.ai/
         quote: >
-          Short description of the company (optional)
+          Industry 4.0
         description: | # this will include new lines to allow paragraphs
-          Description of role
+              In charge of bringing innovation and new technologies.
+    
+              Updated with the latest technology regarding:
+
+              * Distributed systems using Kubernetes orchestration and microservices 
+              * Cyber Security: Security implementation and best practices in infrastructure.
+              * Build and Deploy services using various Cloud Services such as: Amazon Web Services(AWS), Azure and Google Cloud Platform
+
+              Design solutions for disaster recovery management:
+
+              * Test Planning and Execution
+              * Post-Test Analysis
+              * Recovery Lifecycle Management
   - title: Education
     layout: list
     content:
@@ -109,9 +130,11 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+        Alongside my interest in software engineering some of my other hobbies are:
+        - Biking
+        - Gaming
+        - Manga reading
+        - [Becoming a Master of Martial Arts](https://68.media.tumblr.com/36ce2037081ed8356d1258f627d515e8/tumblr_o7wk33S5bZ1tqh2yyo1_500.gif)
 
 # Footer
 footer_show_references: true
