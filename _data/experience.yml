@@ -1,6 +1,5 @@
 - company: X-SENSORS GmbH / Ainda.ai
   link: https://xsensors.ai/
-        https://ainda.ai
   job_title: DevSecOps Engineer
   dates: February 2019 - Present
   quote: >
@@ -17,7 +16,7 @@
     * Data pipeline(Streaming, ApacheNifi, MQTT, OPC-UA, Lakes, Warehouses, Marts, IoT)
     * Log aggregation (ELK)
     * Network (VPC, Subnets)
-    * Backups (Custom scripts with integration with AWS S3)
+    * Backups (Custom scripts with AWS S3 integration)
   
     Updated with the latest technology regarding:
     
@@ -78,7 +77,7 @@
   quote: >
    Our biggest concern is life
   description: | # this will include new lines to allow paragraphs
-    Responsible for managing the whole the hospital infrastructure and leading a team of 3 peoples. The hospital system was using almost only Windows server environments.
+    Responsible for managing the whole the hospital infrastructure and leading a team of 3 people. The hospital system was using almost only Windows server environments.
     
     Main achievements:
    
