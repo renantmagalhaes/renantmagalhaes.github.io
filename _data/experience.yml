@@ -1,12 +1,24 @@
-- company: X-SENSORS GmbH
+- company: X-SENSORS GmbH / Ainda.ai
   link: https://xsensors.ai/
+        https://ainda.ai
   job_title: DevSecOps Engineer
   dates: February 2019 - Present
   quote: >
    Industry 4.0
   description: | # this will include new lines to allow paragraphs
-    In charge of bringing innovation and new technologies.
+    Responsible for building entire infrastructure pipeline from scratch.
     
+    All process around:
+    * Architecture
+    * CI/CD (Integration with Jira + GIT + Jenkins + EKS + Keel.sh + Slack)
+    * Security Policies (WAF, LoadBalancers, GeoIP, Behavior Analysis)
+    * Monitoring (Zabbix, Grafana, Prometheus)
+    * Hardening (Applying best practices to build images, and tests)
+    * Data pipeline(Streaming, ApacheNifi, MQTT, OPC-UA, Lakes, Warehouses, Marts, IoT)
+    * Log aggregation (ELK)
+    * Network (VPC, Subnets)
+    * Backups (Custom scripts with integration with AWS S3)
+  
     Updated with the latest technology regarding:
     
     * Distributed systems using Kubernetes orchestration and microservices 
@@ -26,14 +38,14 @@
   quote: >
    Veni, vidi, vici
   description: | # this will include new lines to allow paragraphs    
-    Responsible for managing hundreds of servers in both public and private Data centers around the world.
+    Responsible for migrating the whole infrastructure on-premises to AWS Cloud and managing hundreds of servers in both public and private Data centers around the world.
     
     Updated with the latest technology regarding:
     
     * Distributed systems using Kubernetes orchestration and microservices 
     * Continuous integration and delivery using cutting edge tools such Jenkins and CicleCI
     * Cyber Security: Security implementation and best practices in infrastructure.
-    * Build and Deploy services using various Cloud Services such as: Amazon Web Services(AWS) and Google Cloud Platform
+    * Build and Deploy services in Amazon Web Services(AWS)
     
     Design solutions for disaster recovery management:
     
@@ -51,6 +63,12 @@
   description: | # this will include new lines to allow paragraphs
     Participate and manage complex projects with several partners to include Cresol at Brazilian financial system.
 
+    * Deploying, maintaining and debugging the system
+    * Jboss environment
+    * Task automation
+    * Log analysis
+    * Benchmarks
+    * Linux administration (RedHat and Debian)
 
 
 - company: Baia Sul Hospital
@@ -60,4 +78,9 @@
   quote: >
    Our biggest concern is life
   description: | # this will include new lines to allow paragraphs
-    I was responsible for manage the whole the hospital infrastructure and leading a team of 3 peoples. The hospital system was using almost only Windows server environments, i brought some opensource tools and implement several linux services for monitoring and managing the tech park.
+    Responsible for managing the whole the hospital infrastructure and leading a team of 3 peoples. The hospital system was using almost only Windows server environments.
+    
+    Main achievements:
+   
+    * Brought open-source tools and implement several Linux services for monitoring and managing the tech park.
+    * Implementation of an audit system
