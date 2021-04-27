@@ -8,7 +8,7 @@
     Responsible for building entire infrastructure pipeline from scratch.
     
     All process around:
-    * Architecture
+    * Cloud Architecture
     * CI/CD (Integration with Jira + GIT + Jenkins + EKS + Keel.sh + Slack)
     * Security Policies (WAF, LoadBalancers, GeoIP, Behavior Analysis)
     * Monitoring (Zabbix, Grafana, Prometheus)
@@ -33,7 +33,7 @@
 - company: CreativeDrive
   link: https://cora.creativedrive.com/
   job_title: DevOps Engineer
-  dates: March 2018 - Present
+  dates: March 2018 - February 2019
   quote: >
    Veni, vidi, vici
   description: | # this will include new lines to allow paragraphs    
