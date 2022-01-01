@@ -1,7 +1,20 @@
+- company: SoSafe GmbH
+  link: https://sosafe.de/
+  job_title: DevOps Engineer
+  dates: January 2022 - Present
+  quote: >
+   Cyber Security Awareness
+  description: | # this will include new lines to allow paragraphs
+    * Development and maintenance of a modern, secure web platform, which enables developers to easily deploy, test and run their products
+    * Implementation and maintenance of features within SoSafe platform
+    * Mentoring and giving workshops for developers and engineers
+    * Active participation in agile work processes
+    * Participation in the design of cloud architecture and technology selection
+
 - company: X-SENSORS GmbH / Ainda.ai
   link: https://xsensors.ai/
   job_title: DevSecOps Engineer
-  dates: February 2019 - Present
+  dates: February 2019 - December 2021
   quote: >
    Industry 4.0
   description: | # this will include new lines to allow paragraphs
