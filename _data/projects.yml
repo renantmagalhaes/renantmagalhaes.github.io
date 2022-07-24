@@ -1,3 +1,11 @@
+- name: Security by Design
+  link: github.com/securitybydesign
+  github: securitybydesign
+  quote: >
+   A knowledge database for security topics
+  description: | # this will include new lines to allow paragraphs
+        Fork from my <mark>RTM project</mark>, focussing only on security topics and discussions.
+
 - name: RTM PROJECT
   link: github.com/renantmagalhaes
   github: renantmagalhaes/knowledge-database

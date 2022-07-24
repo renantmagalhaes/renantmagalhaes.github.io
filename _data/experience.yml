@@ -1,7 +1,16 @@
 - company: SoSafe GmbH
+  link: https://sosafe-awareness.com/
+  job_title: Security Engineer
+  dates: July 2022 - Present
+  quote: >
+   Cyber Security Awareness
+  description: | # this will include new lines to allow paragraphs
+    * TBD
+
+- company: SoSafe GmbH
   link: https://sosafe.de/
-  job_title: DevOps Engineer
-  dates: January 2022 - Present
+  job_title: Platform Engineer
+  dates: January 2022 - July 2022
   quote: >
    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
