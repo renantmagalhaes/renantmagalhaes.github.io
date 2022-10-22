@@ -1,10 +1,10 @@
-- name: Security by Design
-  link: https://securitybydesign.io
-  github: securitybydesign
+- name: Insecure Codes
+  link: https://insecure.codes
+  github: insecurecodes
   quote: >
-   A knowledge database for security topics
+   Only by knowing evil can you truly fight it ...
   description: | # this will include new lines to allow paragraphs
-        Fork from my <mark>RTM project</mark>, focussing only on security topics and discussions.
+        Fork from <mark>RTM project</mark>, focussing only on security topics and discussions.
 
 - name: RTM PROJECT
   link: github.com/renantmagalhaes
