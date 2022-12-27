@@ -5,7 +5,16 @@
   quote: >
    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
-    * TBD
+    * Create and maintain pipelines inside AWS to ensure the product's safety.
+      * Work with several AWS security services.
+    * Develop and implement services/processes myself.
+    * Security assessment.
+    * Ensure the security best practices across all environments.
+      * Including GDPR and ISO27001 compliancy standards.
+    * Work closely with C-Level to define the best path taking into consideration the Cost/Benefit of each tool.
+    * Do training with developers to make sure they have a security-by-design mindset.
+    * Zero trust security model.
+    * Part of the purple team.
 
 - company: SoSafe GmbH
   link: https://sosafe.de/
