@@ -4,7 +4,7 @@
   quote: >
    Only by knowing evil can you truly fight it ...
   description: | # this will include new lines to allow paragraphs
-        Fork from <mark>RTM project</mark>, focussing only on security topics and discussions.
+    A dedicated fork from the <mark>RTM project</mark>, Insecure Codes narrows its focus exclusively on security topics and discussions.
 
 - name: RTM PROJECT
   link: github.com/renantmagalhaes
@@ -12,7 +12,7 @@
   quote: >
    A knowledge database for everyone
   description: | # this will include new lines to allow paragraphs
-        <mark>RTM project</mark> is a personal desire that I had for some time now, it will show all the knowledge that I have acquired in my life as sysadmin, and also functions as an open database of information for me, or anyone that can make use of that.
+    The RTM project stems from a personal aspiration I've harbored for a while. It showcases the vast knowledge I've amassed throughout my sysadmin journey. Designed as an open database, it serves as a reservoir of information, beneficial not just for me but for anyone seeking knowledge.
 
 - name: WORKSTATION 
   link: github.com/renantmagalhaes
