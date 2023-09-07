@@ -5,16 +5,16 @@
   quote: >
    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
-    * Create and maintain pipelines inside AWS to ensure the product's safety.
-      * Work with several AWS security services.
-    * Develop and implement services/processes myself.
-    * Security assessment.
-    * Ensure the security best practices across all environments.
-      * Including GDPR and ISO27001 compliancy standards.
-    * Work closely with C-Level to define the best path taking into consideration the Cost/Benefit of each tool.
-    * Do training with developers to make sure they have a security-by-design mindset.
-    * Zero trust security model.
-    * Part of the purple team.
+    * Architected and maintained AWS pipelines to bolster product security, leveraging multiple AWS security services.
+      * <mark>Security Gates</mark>
+      * Testing / Validations
+    * Independently developed and implemented security services and processes.
+    * Conducted comprehensive security assessments and ensured adherence to best practices across all environments
+      * Compliance with <mark>GDPR and ISO27001</mark> standards.
+    * Collaborated closely with C-Level executives, providing insights on the cost-benefit analysis of various tools.
+    * Led training sessions for developers, instilling a security-by-design mindset.
+    * Advocated and implemented a <mark>zero-trust security model</mark>.
+    * Integral member of the <mark>purple team</mark>, bridging the gap between offensive and defensive security strategies.
 
 - company: SoSafe GmbH
   link: https://sosafe.de/
@@ -23,11 +23,11 @@
   quote: >
    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
-    * Development and maintenance of a modern, secure web platform, which enables developers to easily deploy, test and run their products
-    * Implementation and maintenance of features within SoSafe platform
-    * Mentoring and giving workshops for developers and engineers
-    * Active participation in agile work processes
-    * Participation in the design of cloud architecture and technology selection
+    * Developed and maintained a state-of-the-art, secure web platform, empowering developers to seamlessly deploy, test, and run their products.
+    * Spearheaded the implementation and upkeep of features within the SoSafe platform.
+    * Mentored peers and conducted workshops for developers and engineers.
+    * Engaged actively in agile work processes.
+    * Contributed to the design of cloud architecture and technology selection.
 
 - company: X-SENSORS GmbH / Ainda.ai
   link: https://xsensors.ai/
@@ -36,29 +36,24 @@
   quote: >
    Industry 4.0
   description: | # this will include new lines to allow paragraphs
-    Responsible for building entire infrastructure pipeline from scratch.
+    Pioneered the construction of the entire infrastructure pipeline from the ground up.
     
     All process around:
-    * Cloud Architecture
-    * CI/CD (Integration with Jira + GIT + Jenkins + EKS + Keel.sh + Slack)
-    * Security Policies (WAF, LoadBalancers, GeoIP, Behavior Analysis)
+    * Oversaw processes including Cloud Architecture, CI/CD integration with tools like Jira, GIT, Jenkins, <mark>EKS</mark>, Keel.sh, and Slack.
+    * Implemented robust security policies, including WAF, LoadBalancers, GeoIP, and Behavior Analysis.
     * Monitoring (Zabbix, Grafana, Prometheus)
-    * Hardening (Applying best practices to build images, and tests)
-    * Data pipeline(Streaming, ApacheNifi, MQTT, OPC-UA, Lakes, Warehouses, Marts, IoT)
+    * Executed system <mark>hardening</mark> by applying best practices for image building and testing.
+    * Designed and managed data pipelines, encompassing streaming, Apache Nifi, MQTT, OPC-UA, data  lakes, warehouses, marts, and IoT.
     * Log aggregation (ELK)
-    * Network (VPC, Subnets)
-    * Backups (Custom scripts with AWS S3 integration)
+    * Network segmentation/Zero-trust
+    * Developed custom backup solutions integrated with AWS S3.
   
     Updated with the latest technology regarding:
     
     * Distributed systems using Kubernetes orchestration and microservices 
-    * Cyber Security: Security implementation and best practices in infrastructure.
-    * Build and Deploy services using various Cloud Services such as: Amazon Web Services(AWS), Google Cloud Platform and Digital Ocean
-    Design solutions for disaster recovery management:
-    
-    * Test Planning and Execution
-    * Post-Test Analysis
-    * Recovery Lifecycle Management
+    * Security implementation and best practices in infrastructure.
+    * Devised disaster recovery management solutions, including test planning, post-test analysis, and recovery lifecycle management.
+  
 
     Extra Skills:
 
@@ -74,20 +69,18 @@
   quote: >
    Veni, vidi, vici
   description: | # this will include new lines to allow paragraphs    
-    Responsible for migrating the whole infrastructure on-premises to AWS Cloud and managing hundreds of servers in both public and private Data centers around the world.
-    
-    Updated with the latest technology regarding:
-    
-    * Distributed systems using Kubernetes orchestration and microservices 
-    * Continuous integration and delivery using cutting edge tools such Jenkins and CicleCI
-    * Cyber Security: Security implementation and best practices in infrastructure.
-    * Build and Deploy services in Amazon Web Services(AWS)
-    
-    Design solutions for disaster recovery management:
-    
-    * Test Planning and Execution
-    * Post-Test Analysis
-    * Recovery Lifecycle Management
+    Main driver behind the migration of the entire on-premises infrastructure to AWS Cloud, managing a vast network of servers across both public and private data centers globally.
+
+    Stayed at the forefront of technological advancements by:
+
+    * Implementing distributed systems using <mark>Kubernetes orchestration and microservices</mark>.
+    * Streamlining continuous integration and delivery with state-of-the-art tools such as <mark>Jenkins</mark> and CircleCI.
+    * Prioritizing cybersecurity, ensuring the implementation of security best practices throughout the infrastructure.
+    * Orchestrating and deploying services exclusively on <mark>Amazon Web Services (AWS)</mark>.
+    * Devised comprehensive disaster recovery management strategies, encompassing:
+      * Detailed test planning and execution.
+      * Thorough post-test analysis to identify and address potential vulnerabilities.
+      * Overseeing the entire recovery lifecycle management to ensure swift and efficient system restoration.
 
 
 - company: Cresol Confederação
@@ -97,14 +90,15 @@
   quote: >
    Together We're Strong
   description: | # this will include new lines to allow paragraphs
-    Participate and manage complex projects with several partners to include Cresol at Brazilian financial system.
+    Played a pivotal role in managing intricate projects in collaboration with multiple partners, integrating Cresol into the Brazilian financial system.
 
-    * Deploying, maintaining and debugging the system
-    * Jboss environment
-    * Task automation
-    * Log analysis
-    * Benchmarks
-    * Linux administration (RedHat and Debian)
+    Key responsibilities included:
+
+    * Deployment, maintenance, and debugging of the system in a Jboss environment.
+    * Automation of routine tasks to enhance efficiency.
+    * Comprehensive log analysis to ensure system integrity.
+    * Conducting benchmarks to evaluate and optimize system performance.
+    * Expert administration of Linux systems, specifically RedHat and Debian.
 
 
 - company: Baia Sul Hospital
@@ -114,9 +108,9 @@
   quote: >
    Our biggest concern is life
   description: | # this will include new lines to allow paragraphs
-    Responsible for managing the whole the hospital infrastructure and leading a team of 3 people. The hospital system was using almost only Windows server environments.
+    Entrusted with the comprehensive management of the hospital's IT infrastructure, leading a dedicated team of three professionals in a predominantly Windows server environment.
     
-    Main achievements:
+    Notable achievements::
    
-    * Brought open-source tools and implement several Linux services for monitoring and managing the tech park.
-    * Implementation of an audit system
+    * Introduced and integrated open-source tools, implementing various Linux services for enhanced monitoring and management of the tech infrastructure.
+    * Successfully implemented an audit system, bolstering the hospital's data integrity and compliance.
