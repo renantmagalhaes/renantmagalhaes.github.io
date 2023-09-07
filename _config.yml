@@ -4,12 +4,13 @@ favicon: images/favicon.ico
 
 # Personal info
 name: Renan Toesqui Magalhães
-title: Security Engineer | SysAdmin
+title: Security Engineer | DevSecOps
 email: renan@rtm.codes
 website: https://rtm.codes
+website: https://insecure.codes
 
 # Social links
-twitter_username: renanTM90
+# twitter_username: renanTM90
 github_username:  renantmagalhaes
 # dribbble_username: jekyll
 # facebook_username: jekyll
