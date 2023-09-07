@@ -25,7 +25,7 @@ linkedin_username: renantmagalhaes
 #about_profile_image: images/profile.jpg
 about_profile_image: images/profile2.png
 about_content: | # this will include new lines to allow paragraphs
-  Hello, I am Renan. With a background in DevSecOps, I have extensive experience in the banking sector, collaborating closely with BACEN (Central Bank of Brazil) and SPB (Brazilian Payment System). My expertise spans both Linux and Windows system administration, and I have taken the lead in project management within this domain.
+  Hello, my name is Renan. With a background in DevSecOps, I have extensive experience in the banking sector, collaborating closely with BACEN (Central Bank of Brazil) and SPB (Brazilian Payment System). My expertise spans both Linux and Windows system administration, and I have taken the lead in project management within this domain.
   
   Currently, I am a Security Engineer with a specialization in architecting secure and robust systems for cloud environments. My role encompasses the <mark>design and implementation of best practices</mark> in cloud engineering, ensuring optimal performance and security. I am well-versed in conducting penetration testing to identify and rectify vulnerabilities, ensuring our cloud infrastructure remains impervious to threats. My commitment to continuous learning and staying updated with the latest in cloud security ensures that the systems I work on are both cutting-edge and secure.
 
