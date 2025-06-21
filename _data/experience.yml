@@ -1,9 +1,9 @@
 - company: SoSafe GmbH
   link: https://sosafe-awareness.com/
-  job_title: Security Engineer
+  job_title: Senior Security Engineer | Cloud & Application Security | Zero Trust Advocate
   dates: July 2022 - Present
   quote: >
-   Cyber Security Awareness
+    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
     * Architected and maintained AWS pipelines to bolster product security, leveraging multiple AWS security services.
       * <mark>Security Gates</mark>
@@ -16,15 +16,12 @@
     * Advocated and implemented a <mark>zero-trust security model</mark>.
     * Integral member of the <mark>purple team</mark>, bridging the gap between offensive and defensive security strategies.
 
-
-
-
 - company: SoSafe GmbH
   link: https://sosafe.de/
   job_title: Platform Engineer
   dates: January 2022 - July 2022
   quote: >
-   Cyber Security Awareness
+    Cyber Security Awareness
   description: | # this will include new lines to allow paragraphs
     * Developed and maintained a state-of-the-art, secure web platform, empowering developers to seamlessly deploy, test, and run their products.
     * Spearheaded the implementation and upkeep of features within the SoSafe platform.
@@ -32,18 +29,15 @@
     * Engaged actively in agile work processes.
     * Contributed to the design of cloud architecture and technology selection.
 
-
-
-
 - company: X-SENSORS GmbH / Ainda.ai
   link: https://xsensors.ai/
-  job_title: DevSecOps Engineer
+  job_title: Senior DevSecOps Engineer | Cloud Infrastructure & Security Automation
   dates: February 2019 - December 2021
   quote: >
-   Industry 4.0
+    Industry 4.0
   description: | # this will include new lines to allow paragraphs
     Pioneered the construction of the entire infrastructure pipeline from the ground up.
-    
+
     All process around:
     * Oversaw processes including Cloud Architecture, CI/CD integration with tools like Jira, GIT, Jenkins, <mark>EKS</mark>, Keel.sh, and Slack.
     * Implemented robust security policies, including WAF, LoadBalancers, GeoIP, and Behavior Analysis.
@@ -53,13 +47,13 @@
     * Log aggregation (ELK)
     * Network segmentation/Zero-trust
     * Developed custom backup solutions integrated with AWS S3.
-  
+
     Updated with the latest technology regarding:
-    
+
     * Distributed systems using Kubernetes orchestration and microservices 
     * Security implementation and best practices in infrastructure.
     * Devised disaster recovery management solutions, including test planning, post-test analysis, and recovery lifecycle management.
-  
+
 
     Extra Skills:
 
@@ -67,16 +61,13 @@
     * Shell Script
     * Infrastructure as Code
 
-
-
-
 - company: CreativeDrive
   link: https://cora.creativedrive.com/
-  job_title: DevOps Engineer
+  job_title: Senior Cloud & DevOps Engineer | Kubernetes & AWS Specialist
   dates: March 2018 - February 2019
   quote: >
-   Veni, vidi, vici
-  description: | # this will include new lines to allow paragraphs    
+    Veni, vidi, vici
+  description: | # this will include new lines to allow paragraphs
     Main driver behind the migration of the entire on-premises infrastructure to AWS Cloud, managing a vast network of servers across both public and private data centers globally.
 
     Stayed at the forefront of technological advancements by:
@@ -90,15 +81,12 @@
       * Thorough post-test analysis to identify and address potential vulnerabilities.
       * Overseeing the entire recovery lifecycle management to ensure swift and efficient system restoration.
 
-
-
-
 - company: Cresol Confederação
   link: http://cresolconfederacao.com.br/
-  job_title: IT System Administrator
+  job_title: Infrastructure & Systems Engineer | Linux & Windows Administration | Network & Security Operations
   dates: February 2015 - February 2018
   quote: >
-   Together We're Strong
+    Together We're Strong
   description: | # this will include new lines to allow paragraphs
     Played a pivotal role in managing intricate projects in collaboration with multiple partners, integrating Cresol into the Brazilian financial system.
 
@@ -110,19 +98,16 @@
     * Conducting benchmarks to evaluate and optimize system performance.
     * Expert administration of Linux systems, specifically RedHat and Debian.
 
-
-
-
 - company: Baia Sul Hospital
   link: http://www.hospitalbaiasul.com.br/
-  job_title: IT System Analyst
+  job_title: IT Infrastructure Analyst | Network Administration & Backup Solutions
   dates: April 2014 - February 2015
   quote: >
-   Our biggest concern is life
+    Our biggest concern is life
   description: | # this will include new lines to allow paragraphs
     Entrusted with the comprehensive management of the hospital's IT infrastructure, leading a dedicated team of three professionals in a predominantly Windows server environment.
-    
+
     Notable achievements::
-   
+
     * Introduced and integrated open-source tools, implementing various Linux services for enhanced monitoring and management of the tech infrastructure.
     * Successfully implemented an audit system, bolstering the hospital's data integrity and compliance.
