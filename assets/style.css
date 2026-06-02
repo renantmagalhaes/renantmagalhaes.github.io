@@ -1863,29 +1863,45 @@ a:hover {
     margin-bottom: 0.2rem !important;
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: space-between !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
     align-items: baseline !important;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.05rem;
   }
 
-  .timeline-date {
-    order: 2;
-    color: #444 !important;
-    font-size: 8.5pt !important;
-  }
-
   .role-title {
-    order: 1;
+    order: 1 !important;
+    width: 100% !important;
     font-size: 10.5pt !important;
     color: #000000 !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .tag-divider {
+    display: inline !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 0 0.4rem !important;
+    color: #888 !important;
   }
 
   .company-title {
-    order: 3;
-    width: 100%;
+    order: 2 !important;
+    width: auto !important;
     margin-top: 0.1rem !important;
+    margin-bottom: 0 !important;
     font-size: 9pt !important;
+    display: inline-block !important;
+  }
+
+  .timeline-date {
+    order: 3 !important;
+    width: auto !important;
+    color: #444 !important;
+    font-size: 8.5pt !important;
+    display: inline-block !important;
+    margin-left: auto !important;
   }
 
   .company-title a {
@@ -1964,24 +1980,27 @@ a:hover {
   .nested-role-header {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
     align-items: baseline !important;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.05rem;
     margin-bottom: 0.2rem !important;
-    flex-wrap: nowrap !important;
   }
   .nested-role .role-title {
     font-size: 10.5pt !important;
     color: #000000 !important;
     order: 1 !important;
+    width: 100% !important;
+    margin-bottom: 0.1rem !important;
   }
   .role-date {
     font-size: 8pt !important;
     color: #444 !important;
     order: 2 !important;
-    flex-shrink: 0 !important;
-    margin-left: 1rem;
+    margin-left: auto !important;
+    width: auto !important;
+    display: inline-block !important;
   }
 
   /* Projects print format */
