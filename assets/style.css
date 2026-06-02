@@ -2107,8 +2107,8 @@ a:hover {
     margin-top: 1rem !important;
   }
   .certs-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.2rem 1.2rem !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.2rem 0.8rem !important;
   }
   .cert-card {
     padding: 0.35rem 0.6rem !important;
