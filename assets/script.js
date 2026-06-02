@@ -363,4 +363,267 @@ document.addEventListener('DOMContentLoaded', () => {
   printBtn.addEventListener('click', () => {
     window.print();
   });
+
+  /* ==========================================
+     5. Circuit Board Avatar Animation
+     ========================================== */
+  const canvas = document.getElementById('circuit-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let cx, cy, R;
+    let activePulses = [];
+    let colors = getColors();
+
+    function getColors() {
+      const styles = getComputedStyle(document.body);
+      const accentPrimary = styles.getPropertyValue('--accent-primary').trim() || '#ffffff';
+      const accentSecondary = styles.getPropertyValue('--accent-secondary').trim() || '#94a3b8';
+      const borderColor = styles.getPropertyValue('--border-color').trim() || 'rgba(255, 255, 255, 0.08)';
+      return { accentPrimary, accentSecondary, borderColor };
+    }
+
+    // Generate 14 relative paths (orthogonal horizontal/vertical routing with 4 turns, 25% longer)
+    const relativePaths = [];
+    const numPaths = 14;
+    for (let i = 0; i < numPaths; i++) {
+      const baseAngle = (i * 2 * Math.PI) / numPaths;
+      const jitter = (Math.random() - 0.5) * (2 * Math.PI / numPaths) * 0.35;
+      const theta = baseAngle + jitter;
+      
+      const relPath = [];
+      const x0 = Math.cos(theta);
+      const y0 = Math.sin(theta);
+      relPath.push({ x: x0, y: y0 });
+      
+      const dirX = x0 >= 0 ? 1 : -1;
+      const dirY = y0 >= 0 ? 1 : -1;
+      
+      // Determine dominant direction (horizontal-first or vertical-first)
+      const isHorizontalFirst = Math.abs(x0) > Math.abs(y0);
+      
+      if (isHorizontalFirst) {
+        // Seg 1: Horizontal
+        const L1 = 0.08 + Math.random() * 0.04;
+        const x1 = x0 + L1 * dirX;
+        const y1 = y0;
+        relPath.push({ x: x1, y: y1 });
+        
+        // Seg 2: Vertical
+        const L2 = 0.12 + Math.random() * 0.08;
+        const x2 = x1;
+        const y2 = y1 + L2 * dirY;
+        relPath.push({ x: x2, y: y2 });
+        
+        // Seg 3: Horizontal
+        const L3 = 0.12 + Math.random() * 0.08;
+        const x3 = x2 + L3 * dirX;
+        const y3 = y2;
+        relPath.push({ x: x3, y: y3 });
+
+        // Seg 4: Vertical
+        const L4 = 0.12 + Math.random() * 0.08;
+        const x4 = x3;
+        const y4 = y3 + L4 * dirY;
+        relPath.push({ x: x4, y: y4 });
+
+        // Seg 5: Horizontal
+        const L5 = 0.08 + Math.random() * 0.07;
+        const x5 = x4 + L5 * dirX;
+        const y5 = y4;
+        relPath.push({ x: x5, y: y5 });
+      } else {
+        // Seg 1: Vertical
+        const L1 = 0.08 + Math.random() * 0.04;
+        const x1 = x0;
+        const y1 = y0 + L1 * dirY;
+        relPath.push({ x: x1, y: y1 });
+        
+        // Seg 2: Horizontal
+        const L2 = 0.12 + Math.random() * 0.08;
+        const x2 = x1 + L2 * dirX;
+        const y2 = y1;
+        relPath.push({ x: x2, y: y2 });
+        
+        // Seg 3: Vertical
+        const L3 = 0.12 + Math.random() * 0.08;
+        const x3 = x2;
+        const y3 = y2 + L3 * dirY;
+        relPath.push({ x: x3, y: y3 });
+
+        // Seg 4: Horizontal
+        const L4 = 0.12 + Math.random() * 0.08;
+        const x4 = x3 + L4 * dirX;
+        const y4 = y3;
+        relPath.push({ x: x4, y: y4 });
+
+        // Seg 5: Vertical
+        const L5 = 0.08 + Math.random() * 0.07;
+        const x5 = x4;
+        const y5 = y4 + L5 * dirY;
+        relPath.push({ x: x5, y: y5 });
+      }
+      
+      relativePaths.push(relPath);
+    }
+
+    const pads = relativePaths.map(() => ({ glowIntensity: 0 }));
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+      
+      cx = rect.width / 2;
+      cy = rect.height / 2;
+      // The canvas width is 2.0x the avatar container size
+      R = rect.width / 4;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Re-query colors when theme toggle button is clicked
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        setTimeout(() => {
+          colors = getColors();
+        }, 50);
+      });
+    }
+
+    function getPointOnPath(points, t) {
+      if (points.length === 0) return { x: 0, y: 0 };
+      if (points.length === 1) return points[0];
+      
+      let totalLength = 0;
+      const segments = [];
+      for (let i = 0; i < points.length - 1; i++) {
+        const dx = points[i+1].x - points[i].x;
+        const dy = points[i+1].y - points[i].y;
+        const len = Math.sqrt(dx * dx + dy * dy);
+        segments.push({ from: points[i], to: points[i+1], length: len });
+        totalLength += len;
+      }
+      
+      const targetLength = t * totalLength;
+      let currentLength = 0;
+      for (let i = 0; i < segments.length; i++) {
+        const seg = segments[i];
+        if (currentLength + seg.length >= targetLength || i === segments.length - 1) {
+          const segT = (targetLength - currentLength) / (seg.length || 1);
+          return {
+            x: seg.from.x + (seg.to.x - seg.from.x) * segT,
+            y: seg.from.y + (seg.to.y - seg.from.y) * segT
+          };
+        }
+        currentLength += seg.length;
+      }
+      return points[points.length - 1];
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 1. Get absolute paths based on current center (cx, cy) and radius (R)
+      const absolutePaths = relativePaths.map(relPath => 
+        relPath.map(pt => ({
+          x: cx + pt.x * R,
+          y: cy + pt.y * R
+        }))
+      );
+
+      // 2. Draw copper tracks (faint background traces)
+      absolutePaths.forEach(absPath => {
+        ctx.beginPath();
+        ctx.moveTo(absPath[0].x, absPath[0].y);
+        for (let j = 1; j < absPath.length; j++) {
+          ctx.lineTo(absPath[j].x, absPath[j].y);
+        }
+        ctx.strokeStyle = colors.accentPrimary;
+        ctx.lineWidth = 1.2;
+        ctx.globalAlpha = 0.12;
+        ctx.stroke();
+      });
+
+      // 3. Update & Draw pulses
+      // Spawn new pulses randomly
+      if (Math.random() < 0.015 && activePulses.length < 4) {
+        activePulses.push({
+          pathIndex: Math.floor(Math.random() * numPaths),
+          progress: 0,
+          speed: 0.006 + Math.random() * 0.008,
+          color: Math.random() < 0.65 ? colors.accentPrimary : colors.accentSecondary
+        });
+      }
+
+      activePulses.forEach((pulse, idx) => {
+        pulse.progress += pulse.speed;
+        
+        if (pulse.progress >= 1) {
+          pads[pulse.pathIndex].glowIntensity = 1.0;
+          activePulses.splice(idx, 1);
+          return;
+        }
+
+        const absPath = absolutePaths[pulse.pathIndex];
+        const pt = getPointOnPath(absPath, pulse.progress);
+
+        // Outer glow
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 4.5, 0, 2 * Math.PI);
+        ctx.fillStyle = pulse.color;
+        ctx.globalAlpha = 0.35;
+        ctx.fill();
+
+        // Inner bright core
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, 1.8, 0, 2 * Math.PI);
+        ctx.fillStyle = '#ffffff';
+        ctx.globalAlpha = 1.0;
+        ctx.fill();
+      });
+
+      // 4. Update & Draw terminating pads (vias)
+      pads.forEach((pad, i) => {
+        if (pad.glowIntensity > 0) {
+          pad.glowIntensity -= 0.035;
+          if (pad.glowIntensity < 0) pad.glowIntensity = 0;
+        }
+
+        const absPath = absolutePaths[i];
+        const endPt = absPath[absPath.length - 1];
+
+        // Base pad dot
+        ctx.beginPath();
+        ctx.arc(endPt.x, endPt.y, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = colors.accentPrimary;
+        ctx.globalAlpha = 0.35 + 0.65 * pad.glowIntensity;
+        ctx.fill();
+
+        // Tiny center via hole
+        ctx.beginPath();
+        ctx.arc(endPt.x, endPt.y, 1, 0, 2 * Math.PI);
+        ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--bg-color').trim() || '#000000';
+        ctx.globalAlpha = 0.8;
+        ctx.fill();
+
+        // Expand ripple glow when hit by a pulse
+        if (pad.glowIntensity > 0) {
+          ctx.beginPath();
+          ctx.arc(endPt.x, endPt.y, 3 + 8 * (1 - pad.glowIntensity), 0, 2 * Math.PI);
+          ctx.strokeStyle = colors.accentPrimary;
+          ctx.lineWidth = 1.2;
+          ctx.globalAlpha = pad.glowIntensity * 0.7;
+          ctx.stroke();
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
 });

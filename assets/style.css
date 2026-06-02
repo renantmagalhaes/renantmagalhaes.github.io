@@ -313,20 +313,23 @@ a:hover {
   width: 250px;
   height: 250px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-glow {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   background: var(--accent-gradient);
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  filter: blur(8px);
+  border-radius: 50%;
+  filter: blur(4px);
   z-index: 1;
-  opacity: 0.65;
-  animation: morphGlow 8s ease-in-out infinite alternate;
+  opacity: 0.55;
+  animation: subtlePulse 4s ease-in-out infinite alternate;
 }
 
 .hero-avatar {
@@ -334,12 +337,31 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  border: 4px solid var(--bg-color);
+  border-radius: 50%;
+  border: 1.5px solid var(--bg-color);
   z-index: 2;
   box-shadow: var(--shadow-lg);
-  animation: morphAvatar 8s ease-in-out infinite alternate;
   background-color: var(--bg-card);
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar-container:hover .hero-avatar {
+  transform: scale(1.03);
+}
+
+.hero-avatar-container:hover .avatar-glow {
+  opacity: 0.75;
+}
+
+.circuit-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-info {
@@ -1165,27 +1187,14 @@ a:hover {
   }
 }
 
-@keyframes morphGlow {
+@keyframes subtlePulse {
   0% {
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  }
-  50% {
-    border-radius: 55% 45% 48% 52% / 58% 42% 58% 42%;
+    transform: scale(0.97);
+    opacity: 0.5;
   }
   100% {
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  }
-}
-
-@keyframes morphAvatar {
-  0% {
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  }
-  50% {
-    border-radius: 48% 52% 42% 58% / 48% 54% 46% 52%;
-  }
-  100% {
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transform: scale(1.03);
+    opacity: 0.7;
   }
 }
 
@@ -1641,6 +1650,7 @@ a:hover {
   /* Hide Non-Print Elements */
   .navbar,
   .bg-glow,
+  .circuit-canvas,
   .skills-helper,
   .search-box-container,
   .active-filters-bar,
