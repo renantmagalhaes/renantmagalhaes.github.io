@@ -1908,12 +1908,22 @@ a:hover {
     align-items: baseline !important;
     flex-wrap: nowrap !important;
   }
+  .company-group-header .company-title {
+    order: 1 !important;
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 11pt !important;
+  }
   .company-duration {
+    order: 2 !important;
     font-size: 8.5pt !important;
     color: #444 !important;
     background: none !important;
     border: none !important;
     padding: 0 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    margin-left: 1rem !important;
   }
   .nested-roles-container {
     padding-left: 0 !important;
