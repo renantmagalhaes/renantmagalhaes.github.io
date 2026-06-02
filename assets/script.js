@@ -204,9 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return cardTags.some(tag => tag.includes(filter) || filter.includes(tag));
       });
       
-      const matchesSearch = searchQuery === '' || fullText.includes(searchQuery);
-
-      if (matchesTags && matchesSearch) {
+      if (matchesTags) {
         card.classList.remove('filtered-out');
         // Highlight active badges
         card.querySelectorAll('.badge').forEach(badge => {
