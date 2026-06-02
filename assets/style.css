@@ -389,20 +389,20 @@ a:hover {
 }
 
 .hero-contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
 }
 
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 30px;
   transition: var(--transition-smooth);
 }
 
@@ -413,24 +413,35 @@ a:hover {
 }
 
 .contact-icon {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--accent-primary);
 }
 
+.contact-card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 .contact-label {
-  display: block;
+  display: inline-block;
   font-size: 0.75rem;
   text-transform: uppercase;
   color: var(--text-muted);
   letter-spacing: 0.05em;
 }
 
+.contact-card div:has(.contact-value) .contact-label::after {
+  content: ":";
+}
+
 .contact-value {
-  display: block;
-  font-size: 0.9rem;
+  display: inline-block;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-main);
-  word-break: break-all;
+  word-break: keep-all;
 }
 
 .hero-social-list {
@@ -1698,9 +1709,9 @@ a:hover {
   }
 
   .hero-contact-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.5rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem 1rem !important;
     margin-top: 0.5rem !important;
   }
 
@@ -1710,6 +1721,14 @@ a:hover {
     background: none !important;
     transform: none !important;
     box-shadow: none !important;
+    display: flex !important;
+  }
+
+  .contact-card div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
   }
 
   .contact-icon {
@@ -1722,8 +1741,9 @@ a:hover {
     font-weight: bold;
     color: #555 !important;
   }
-  .contact-label::after {
-    content: ": ";
+  
+  .contact-card div:has(.contact-value) .contact-label::after {
+    content: ": " !important;
   }
 
   .contact-value {
