@@ -3,10 +3,10 @@ repository: sproogen/resume-theme
 favicon: images/favicon.ico
 
 # Personal info
-name: Renan Toesqui Magalhães
-title: Security Engineer | DevSecOps
-email: rtm@insecure.codes
-website: https://insecure.codes
+name: Renan Toesqui Magalhaes
+title: Staff Security Engineer | Cloud & Application Security | Zero Trust Advocate
+email: renan@seclabs.cc
+website: https://seclabs.cc
 
 # Social links
 # twitter_username: renanTM90
@@ -25,9 +25,9 @@ linkedin_username: renantmagalhaes
 #about_profile_image: images/profile.jpg
 about_profile_image: images/profile2.png
 about_content: | # this will include new lines to allow paragraphs
-  Hello, my name is Renan. With a background in DevSecOps, I have extensive experience in the banking sector, collaborating closely with BACEN (Central Bank of Brazil) and SPB (Brazilian Payment System). My expertise spans both Linux and Windows system administration, and I have taken the lead in project management within this domain.
+  Hello, my name is Renan. Building on a technical foundation in DevSecOps and systems administration, I have transitioned from securing critical banking infrastructure for the Brazilian Payment System (SPB) to driving enterprise security initiatives as a **Staff Engineer**. My trajectory has evolved from hands-on infrastructure management to leading complex, cross-functional technical strategies that bridge the gap between technical security and overarching business objectives.
   
-  Currently, I am a Security Engineer with a specialization in architecting secure and robust systems for cloud environments. My role encompasses the <mark>design and implementation of best practices</mark> in cloud engineering, ensuring optimal performance and security. I am well-versed in conducting penetration testing to identify and rectify vulnerabilities, ensuring our cloud infrastructure remains impervious to threats. My commitment to continuous learning and staying updated with the latest in cloud security ensures that the systems I work on are both cutting-edge and secure.
+  My current focus is on enabling engineering teams to develop software securely by providing the necessary frameworks and tools, including a proactive <mark>AI security posture</mark> to increase development velocity. I specialize in executing the company vision by leading large-scale projects that align technical security with business goals. Central to my approach is the implementation of <mark>Zero Trust principles</mark>, ensuring that security is a seamless, resilient, and supportive part of the organization's growth. I bridge the gap between deep technical execution and GRC initiatives, such as <mark>ISO27001 and GDPR</mark>, to foster a culture where security accelerates delivery.
 
 # Projects Section
 # projects_title: Projects
