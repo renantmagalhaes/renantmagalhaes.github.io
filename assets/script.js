@@ -1,38 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   /* ==========================================
-     1. Theme Toggle Management
+     1. Theme Toggle Management (3-way: light, dark, cyber)
      ========================================== */
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = themeToggle.querySelector('i');
   
-  // Check local storage or system preference
-  const savedTheme = localStorage.getItem('rtm-theme');
-  const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  // Available themes
+  const themes = ['light', 'dark', 'cyber'];
   
-  if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
-    document.body.classList.remove('dark-theme');
-    document.body.classList.add('light-theme');
-    themeIcon.className = 'fa-solid fa-sun';
-  } else {
-    document.body.classList.remove('light-theme');
-    document.body.classList.add('dark-theme');
-    themeIcon.className = 'fa-solid fa-moon';
+  // Check local storage or system preference
+  let currentTheme = localStorage.getItem('rtm-theme');
+  
+  if (!currentTheme) {
+    const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    currentTheme = systemPrefersLight ? 'light' : 'dark';
   }
 
-  // Toggle Theme Event
-  themeToggle.addEventListener('click', () => {
-    if (document.body.classList.contains('dark-theme')) {
-      document.body.classList.remove('dark-theme');
-      document.body.classList.add('light-theme');
+  // Helper to apply the current theme to body and update icon
+  function applyTheme(theme) {
+    // Remove all theme classes
+    themes.forEach(t => document.body.classList.remove(t + '-theme'));
+    // Add current theme class
+    document.body.classList.add(theme + '-theme');
+    
+    // Update theme icon
+    if (theme === 'light') {
       themeIcon.className = 'fa-solid fa-sun';
-      localStorage.setItem('rtm-theme', 'light');
-    } else {
-      document.body.classList.remove('light-theme');
-      document.body.classList.add('dark-theme');
+      themeToggle.setAttribute('title', 'Switch to Dark Mode');
+    } else if (theme === 'dark') {
       themeIcon.className = 'fa-solid fa-moon';
-      localStorage.setItem('rtm-theme', 'dark');
+      themeToggle.setAttribute('title', 'Switch to Cyber Mode');
+    } else if (theme === 'cyber') {
+      themeIcon.className = 'fa-solid fa-terminal';
+      themeToggle.setAttribute('title', 'Switch to Light Mode');
     }
+    
+    localStorage.setItem('rtm-theme', theme);
+  }
+  
+  // Initial apply
+  applyTheme(currentTheme);
+
+  // Toggle Theme Event (cycles through themes)
+  themeToggle.addEventListener('click', () => {
+    const currentIndex = themes.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    currentTheme = themes[nextIndex];
+    applyTheme(currentTheme);
   });
 
   /* ==========================================
