@@ -1295,6 +1295,130 @@ a:hover {
     left: 1.5rem;
     top: 1.5rem;
   }
+
+  /* Mobile Company Group overrides */
+  .company-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .company-duration {
+    font-size: 0.8rem;
+  }
+  .nested-roles-container {
+    padding-left: 1.5rem;
+  }
+  .nested-role::before {
+    left: -17px;
+  }
+  .nested-role-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+}
+
+/* ==========================================
+   Company Group Experience Layout
+   ========================================== */
+
+.company-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.company-duration {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background-color: var(--highlight-bg);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-border);
+}
+
+.nested-roles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+.nested-roles-container::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.nested-role {
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.nested-role::before {
+  content: '';
+  position: absolute;
+  left: -21px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  transition: var(--transition-smooth);
+}
+
+.nested-role:hover::before {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary);
+  box-shadow: 0 0 8px var(--accent-primary);
+}
+
+.nested-role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.role-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+}
+
+.nested-role .role-title {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.nested-role .timeline-quote {
+  margin-bottom: 0.8rem;
+}
+
+.nested-role .card-tags-row {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+}
+
+.nested-role.filtered-out {
+  display: none !important;
 }
 
 /* ==========================================
@@ -1573,6 +1697,55 @@ a:hover {
 
   .card-tags-row {
     display: none !important;
+  }
+
+  /* Grouped Company Print Layout */
+  .company-group-header {
+    border-bottom: 2px solid #333 !important;
+    padding-bottom: 0.2rem !important;
+    margin-bottom: 0.8rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+  }
+  .company-duration {
+    font-size: 9pt !important;
+    color: #444 !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .nested-roles-container {
+    padding-left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+  .nested-roles-container::before {
+    display: none !important;
+  }
+  .nested-role {
+    page-break-inside: avoid;
+    padding-left: 0 !important;
+  }
+  .nested-role::before {
+    display: none !important;
+  }
+  .nested-role-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.3rem !important;
+  }
+  .role-date {
+    font-size: 8.5pt !important;
+    color: #444 !important;
+  }
+  .nested-role .role-title {
+    font-size: 11pt !important;
+    color: #000000 !important;
   }
 
   /* Projects print format */

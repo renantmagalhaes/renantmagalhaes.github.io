@@ -109,36 +109,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter Timeline Items (Experiences)
     timelineItems.forEach(item => {
-      const tagsAttr = item.getAttribute('data-tags') || '';
-      const itemTags = tagsAttr.split(',').map(t => t.trim());
-      
-      const roleTitle = item.querySelector('.role-title')?.textContent.toLowerCase() || '';
-      const companyTitle = item.querySelector('.company-title')?.textContent.toLowerCase() || '';
-      const textDetails = item.querySelector('.timeline-details')?.textContent.toLowerCase() || '';
-      const quoteDetails = item.querySelector('.timeline-quote')?.textContent.toLowerCase() || '';
-      const fullText = `${roleTitle} ${companyTitle} ${textDetails} ${quoteDetails} ${tagsAttr}`;
-      
-      const matchesTags = activeFilters.size === 0 || Array.from(activeFilters).some(filter => {
-        // Broad tag matching (e.g. "grc" matches items tagged with "grc" or matching subterms)
-        return itemTags.some(tag => tag.includes(filter) || filter.includes(tag));
-      });
-      
-      const matchesSearch = searchQuery === '' || fullText.includes(searchQuery);
-
-      if (matchesTags && matchesSearch) {
-        item.classList.remove('filtered-out');
-        // Toggle specific inline tag highlights inside experience cards
-        item.querySelectorAll('.badge').forEach(badge => {
-          const badgeText = badge.textContent.toLowerCase();
-          const matchesAnyActiveFilter = Array.from(activeFilters).some(f => badgeText.includes(f) || f.includes(badgeText));
-          if (matchesAnyActiveFilter) {
-            badge.classList.add('active-glow');
+      if (item.classList.contains('company-group')) {
+        const companyTitle = item.querySelector('.company-title')?.textContent.toLowerCase() || '';
+        const nestedRoles = item.querySelectorAll('.nested-role');
+        let anyRoleVisible = false;
+        
+        nestedRoles.forEach(role => {
+          const tagsAttr = role.getAttribute('data-tags') || '';
+          const roleTags = tagsAttr.split(',').map(t => t.trim());
+          
+          const roleTitle = role.querySelector('.role-title')?.textContent.toLowerCase() || '';
+          const textDetails = role.querySelector('.timeline-details')?.textContent.toLowerCase() || '';
+          const quoteDetails = role.querySelector('.timeline-quote')?.textContent.toLowerCase() || '';
+          const fullText = `${roleTitle} ${companyTitle} ${textDetails} ${quoteDetails} ${tagsAttr}`;
+          
+          const matchesTags = activeFilters.size === 0 || Array.from(activeFilters).some(filter => {
+            return roleTags.some(tag => tag.includes(filter) || filter.includes(tag));
+          });
+          
+          const matchesSearch = searchQuery === '' || fullText.includes(searchQuery);
+          
+          if (matchesTags && matchesSearch) {
+            role.classList.remove('filtered-out');
+            anyRoleVisible = true;
+            
+            // Highlight active badges
+            role.querySelectorAll('.badge').forEach(badge => {
+              const badgeText = badge.textContent.toLowerCase();
+              const matchesAnyActiveFilter = Array.from(activeFilters).some(f => badgeText.includes(f) || f.includes(badgeText));
+              if (matchesAnyActiveFilter) {
+                badge.classList.add('active-glow');
+              } else {
+                badge.classList.remove('active-glow');
+              }
+            });
           } else {
-            badge.classList.remove('active-glow');
+            role.classList.add('filtered-out');
           }
         });
+        
+        if (anyRoleVisible) {
+          item.classList.remove('filtered-out');
+        } else {
+          item.classList.add('filtered-out');
+        }
+        
       } else {
-        item.classList.add('filtered-out');
+        // Regular single-role experience item
+        const tagsAttr = item.getAttribute('data-tags') || '';
+        const itemTags = tagsAttr.split(',').map(t => t.trim());
+        
+        const roleTitle = item.querySelector('.role-title')?.textContent.toLowerCase() || '';
+        const companyTitle = item.querySelector('.company-title')?.textContent.toLowerCase() || '';
+        const textDetails = item.querySelector('.timeline-details')?.textContent.toLowerCase() || '';
+        const quoteDetails = item.querySelector('.timeline-quote')?.textContent.toLowerCase() || '';
+        const fullText = `${roleTitle} ${companyTitle} ${textDetails} ${quoteDetails} ${tagsAttr}`;
+        
+        const matchesTags = activeFilters.size === 0 || Array.from(activeFilters).some(filter => {
+          return itemTags.some(tag => tag.includes(filter) || filter.includes(tag));
+        });
+        
+        const matchesSearch = searchQuery === '' || fullText.includes(searchQuery);
+
+        if (matchesTags && matchesSearch) {
+          item.classList.remove('filtered-out');
+          
+          // Highlight active badges
+          item.querySelectorAll('.badge').forEach(badge => {
+            const badgeText = badge.textContent.toLowerCase();
+            const matchesAnyActiveFilter = Array.from(activeFilters).some(f => badgeText.includes(f) || f.includes(badgeText));
+            if (matchesAnyActiveFilter) {
+              badge.classList.add('active-glow');
+            } else {
+              badge.classList.remove('active-glow');
+            }
+          });
+        } else {
+          item.classList.add('filtered-out');
+        }
       }
     });
 
