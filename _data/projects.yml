@@ -1,6 +1,6 @@
-- name: Insecure Codes
+- name: Security Labs
   link: https://seclabs.cc
-  github: insecurecodes
+  github: seclabs-cc
   quote: >
    Only by knowing evil can you truly fight it ...
   description: | # this will include new lines to allow paragraphs
