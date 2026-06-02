@@ -1607,11 +1607,24 @@ a:hover {
    ========================================== */
 
 @media print {
+  @page {
+    margin: 0;
+  }
+
   body {
     background: #ffffff !important;
     color: #000000 !important;
-    font-size: 10pt;
-    line-height: 1.4;
+    font-size: 9pt;
+    line-height: 1.3;
+    padding: 0.8cm 1.2cm;
+    margin: 0;
+  }
+
+  /* Force scroll reveal sections to be visible when printing */
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   /* Hide Non-Print Elements */
@@ -1637,14 +1650,14 @@ a:hover {
   /* Reset container blocks for printing */
   .hero-section {
     padding: 0 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
     max-width: 100% !important;
   }
 
   .hero-container {
     display: flex !important;
     flex-direction: row !important;
-    gap: 2rem !important;
+    gap: 1.2rem !important;
     align-items: flex-start !important;
     text-align: left !important;
   }
@@ -1672,15 +1685,15 @@ a:hover {
   }
 
   .hero-title {
-    font-size: 22pt !important;
+    font-size: 20pt !important;
     background: none !important;
     -webkit-text-fill-color: initial !important;
     color: #000000 !important;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
   }
 
   .hero-subtitle {
-    font-size: 11pt !important;
+    font-size: 10pt !important;
     color: #333333 !important;
   }
 
@@ -1722,7 +1735,7 @@ a:hover {
   /* Main Container Adjustments */
   .content-container {
     padding: 0 !important;
-    gap: 1.5rem !important;
+    gap: 0.6rem !important;
     max-width: 100% !important;
   }
 
@@ -1736,10 +1749,10 @@ a:hover {
   }
 
   .section-title {
-    font-size: 14pt !important;
+    font-size: 12pt !important;
     border-bottom: 2px solid #333 !important;
-    padding-bottom: 0.2rem !important;
-    margin-bottom: 1rem !important;
+    padding-bottom: 0.1rem !important;
+    margin-bottom: 0.35rem !important;
     color: #000 !important;
   }
 
@@ -1748,26 +1761,26 @@ a:hover {
   }
 
   .about-content {
-    font-size: 10pt !important;
+    font-size: 9pt !important;
     color: #000000 !important;
-    gap: 0.6rem !important;
+    gap: 0.4rem !important;
   }
 
   /* Skills print format */
   .skills-matrix {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
+    gap: 0.6rem !important;
   }
 
   .skill-category-card {
-    padding: 0.5rem 0 !important;
+    padding: 0.2rem 0 !important;
     border: none !important;
     background: none !important;
     transform: none !important;
   }
 
   .skill-category-header {
-    margin-bottom: 0.4rem !important;
+    margin-bottom: 0.2rem !important;
   }
 
   .skill-category-icon {
@@ -1775,20 +1788,20 @@ a:hover {
   }
 
   .skill-category-header h3 {
-    font-size: 11pt !important;
+    font-size: 10pt !important;
     text-decoration: underline;
   }
 
   .skill-tags {
-    gap: 0.3rem !important;
+    gap: 0.2rem !important;
   }
 
   .skill-tag {
     background: none !important;
     border: 1px solid #ccc !important;
     color: #000 !important;
-    padding: 0.1rem 0.4rem !important;
-    font-size: 8pt !important;
+    padding: 0.05rem 0.3rem !important;
+    font-size: 7.5pt !important;
   }
 
   /* Timeline print format */
@@ -1805,10 +1818,14 @@ a:hover {
   }
 
   .timeline-item {
-    margin-bottom: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
     page-break-inside: avoid;
     transform: none !important;
     opacity: 1 !important;
+  }
+
+  .timeline-item.company-group {
+    page-break-inside: auto !important;
   }
 
   .timeline-content-wrapper {
@@ -1823,24 +1840,24 @@ a:hover {
   }
 
   .timeline-header {
-    margin-bottom: 0.3rem !important;
+    margin-bottom: 0.2rem !important;
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
     align-items: baseline !important;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.1rem;
+    padding-bottom: 0.05rem;
   }
 
   .timeline-date {
     order: 2;
     color: #444 !important;
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
   }
 
   .role-title {
     order: 1;
-    font-size: 11pt !important;
+    font-size: 10.5pt !important;
     color: #000000 !important;
   }
 
@@ -1861,8 +1878,8 @@ a:hover {
   }
 
   .timeline-details ul {
-    gap: 0.3rem !important;
-    font-size: 9.5pt !important;
+    gap: 0.15rem !important;
+    font-size: 9pt !important;
     color: #111 !important;
   }
 
@@ -1883,14 +1900,16 @@ a:hover {
   /* Grouped Company Print Layout */
   .company-group-header {
     border-bottom: 2px solid #333 !important;
-    padding-bottom: 0.2rem !important;
-    margin-bottom: 0.8rem !important;
+    padding-bottom: 0.1rem !important;
+    margin-bottom: 0.4rem !important;
     display: flex !important;
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: baseline !important;
+    flex-wrap: nowrap !important;
   }
   .company-duration {
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
     color: #444 !important;
     background: none !important;
     border: none !important;
@@ -1900,7 +1919,7 @@ a:hover {
     padding-left: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.2rem !important;
+    gap: 0.5rem !important;
   }
   .nested-roles-container::before {
     display: none !important;
@@ -1914,24 +1933,30 @@ a:hover {
   }
   .nested-role-header {
     display: flex !important;
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: baseline !important;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.1rem;
-    margin-bottom: 0.3rem !important;
-  }
-  .role-date {
-    font-size: 8.5pt !important;
-    color: #444 !important;
+    padding-bottom: 0.05rem;
+    margin-bottom: 0.2rem !important;
+    flex-wrap: nowrap !important;
   }
   .nested-role .role-title {
-    font-size: 11pt !important;
+    font-size: 10.5pt !important;
     color: #000000 !important;
+    order: 1 !important;
+  }
+  .role-date {
+    font-size: 8pt !important;
+    color: #444 !important;
+    order: 2 !important;
+    flex-shrink: 0 !important;
+    margin-left: 1rem;
   }
 
   /* Projects print format */
   .projects-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1rem !important;
   }
 
@@ -1980,8 +2005,8 @@ a:hover {
 
   /* Education print format */
   .education-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.2rem !important;
   }
 
   .education-card {
@@ -2039,6 +2064,8 @@ a:hover {
     border-radius: 4px !important;
     font-size: 9pt !important;
     background: none !important;
+    color: #000000 !important;
+    text-decoration: none !important;
   }
 
   .hobby-icon {
@@ -2047,16 +2074,17 @@ a:hover {
 
   /* Print styling for certifications */
   .margin-top-l {
-    margin-top: 1.5rem !important;
+    margin-top: 1rem !important;
   }
   .certs-grid {
-    grid-template-columns: 1fr !important;
-    gap: 0.6rem !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.2rem 1.2rem !important;
   }
   .cert-card {
-    padding: 0 !important;
-    border: none !important;
-    background: none !important;
+    padding: 0.35rem 0.6rem !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #f8fafc !important;
+    border-radius: 6px !important;
     box-shadow: none !important;
     transform: none !important;
     page-break-inside: avoid;
@@ -2074,8 +2102,7 @@ a:hover {
     color: #333 !important;
   }
   .cert-meta {
-    font-size: 8pt !important;
-    color: #555 !important;
+    display: none !important;
   }
   .edu-sub-title {
     font-size: 12pt !important;
