@@ -9,8 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Available themes
   const themes = ['light', 'dark', 'cyber'];
   
-  // Check local storage or system preference
-  let currentTheme = localStorage.getItem('rtm-theme');
+  // Check URL parameters or hash to force a specific theme (useful for embeds/links)
+  const urlParams = new URLSearchParams(window.location.search);
+  let forcedTheme = urlParams.get('theme');
+  
+  if (!forcedTheme) {
+    const hash = window.location.hash.toLowerCase();
+    if (hash === '#light' || hash === '#theme-light') forcedTheme = 'light';
+    else if (hash === '#dark' || hash === '#theme-dark') forcedTheme = 'dark';
+    else if (hash === '#cyber' || hash === '#theme-cyber') forcedTheme = 'cyber';
+  }
+  
+  // Validate forced theme
+  if (forcedTheme && !themes.includes(forcedTheme)) {
+    forcedTheme = null;
+  }
+  
+  // Check local storage or system preference if not forced
+  let currentTheme = forcedTheme || localStorage.getItem('rtm-theme');
   
   if (!currentTheme) {
     const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -18,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Helper to apply the current theme to body and update icon
-  function applyTheme(theme) {
+  function applyTheme(theme, save = true) {
     // Remove all theme classes
     themes.forEach(t => document.body.classList.remove(t + '-theme'));
     // Add current theme class
@@ -36,11 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggle.setAttribute('title', 'Switch to Light Mode');
     }
     
-    localStorage.setItem('rtm-theme', theme);
+    if (save) {
+      localStorage.setItem('rtm-theme', theme);
+    }
   }
   
-  // Initial apply
-  applyTheme(currentTheme);
+  // Initial apply (do not save to local storage if it was forced via URL)
+  applyTheme(currentTheme, !forcedTheme);
 
   // Toggle Theme Event (cycles through themes)
   themeToggle.addEventListener('click', () => {
